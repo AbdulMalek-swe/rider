@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100;300;400;500;600;700;900&display=swap');
+@import "tailwindcss";
+ 
+@custom-variant dark (&:where(.dark, .dark *));
+@theme {
+  --font-display: "Satoshi", "sans-serif"; 
+  --color-light: #F9FAFB;
+  --color-dark: #111827;
+  --color-lightCard: #FFFFFF;
+  --color-darkCard: #1E293B;
+  --color-lightBorder: #E5E7EB;
+  --color-darkBorder: #374151;
+  --color-lightTitle: #1E293B;
+  --color-lightPrimary: #334155;
+  --color-lightSecondary: #64748B; 
+  --color-lightAccent: #4F46E5; 
+  --color-darkAccent: #6366F1;
+  --color-darkTitle: #F3F4F6;
+  --color-darkPrimary: #E5E7EB;
+  --color-darkSecondary: #9CA3AF; 
+  --color-primary: #DC2626; 
+  --font-hanken: 'Hanken Grotesk', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+}
+/* Default Light Mode Styles */
+body {
+  background-color: #FFFFFF; 
+  color:rgb(75, 75, 75);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+button {
+  cursor: pointer;
+}
+
+.rdt_Table {
+  @apply bg-light text-dark border-lightBorder;  
+}
+
+.rdt_TableHead {
+  @apply bg-light text-lightTitle;  
+}
+
+.rdt_TableRow {
+  @apply bg-light text-lightTitle border-b border-lightBorder;  
+}
+
+.rdt_TableRow:hover {
+  @apply bg-light text-lightTitle;  
+}
+
+/* Dark Mode Styles */
+.dark body {
+  background-color: #111827; 
+  color:rgb(199, 199, 199);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark .rdt_Table {
+  @apply bg-dark text-darkTitle border-darkBorder;  
+}
+
+.dark .rdt_TableHead {
+  @apply bg-dark text-darkTitle;  
+}
+.dark .rdt_TableHeadRow {
+  @apply bg-darkCard text-darkTitle;  
+}
+
+.dark .rdt_TableRow {
+  @apply bg-darkCard text-darkTitle border-b border-darkBorder; 
+}
+
+.dark .rdt_TableRow:hover {
+  @apply bg-darkCard text-darkTitle ;  
+}
+ 
+.rdt_Table,
+.rdt_TableHead,
+.rdt_TableRow {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.react-datepicker-wrapper {
+  width: 100% ;
+}
+.react-datepicker__input-container input {
+  width: 100%  ;
+  border-radius:8px;
+}
