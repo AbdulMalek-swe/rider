@@ -88,10 +88,10 @@ const Earning = () => {
 
       {/* Data Table */}
       <div className="font-poppins pt-5">
-        <h2 className="text-lg  font-semibold text-[#8B8B8B] mb-3">
+        {/* <h2 className="text-lg  font-semibold text-[#8B8B8B] mb-3">
           Earning Details
-        </h2>
-        {loading ? (
+        </h2> */}
+        {/* {loading ? (
           <EarningsTableSkeleton />
         ) : (
           <DataTable
@@ -104,7 +104,7 @@ const Earning = () => {
             dense
             noHeader
           />
-        )}
+        )} */}
       </div>
     </div>
   );

@@ -24,6 +24,7 @@ const appRoutes = [
       { index: true, element: <Dashboard /> },   
       { path: "orders", element: <AllOrderList /> },  
       { path: "order/:id", element: <OrderDetails /> },  
+      { path: "earning", element: <Earning /> },  
       { path: "inventory", element: <Inventory /> },
       { path: "earnings", element: <Earning /> },    
       { path: "pending-orders", element: <PendingOrders/> }, 

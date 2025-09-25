@@ -8,7 +8,6 @@ import { MdOutlineInventory2 } from "react-icons/md";
 import { CiWallet } from "react-icons/ci";
 import { SingleSelect } from "../input";
 
-
 const Sidebar = ({
   toggleSidebar,
   openMobileMenu,
@@ -22,8 +21,6 @@ const Sidebar = ({
   const toggleMenu = (title) => {
     setOpenMenu(openMenu === title ? null : title);
   };
-
-
 
   const menuData = [
     {
@@ -63,11 +60,23 @@ const Sidebar = ({
           status: "cancelled",
         },
       ],
-    }, 
+    },
+    {
+      title: "Earning",
+      icon: <RxDashboard />,
+      path: "/dashboard/earning",
+      children: [
+        {
+          title: "All Earning",
+          icon: <RxDashboard />,
+          path: "/dashboard/earning",
+        },
+      ],
+    },
   ];
 
   return (
-    <>  
+    <>
       {menuStyle === "hover" && (
         <div className="hidden md:block w-24 hover:w-52 h-screen bg-lightCard dark:bg-darkCard dark:text-darkTitle py-4 group  transition-all duration-300 ease-in-out overflow-hidden  ">
           <div className="flex items-center space-x-2 pl-4">

@@ -23,6 +23,7 @@ const Profile = () => {
     setLoading(true);
     try {
       const response = await NetworkServices.Profile.index();
+      console.log(response,"---");
       if (response?.status === 200) {
         setData(response?.data?.data || null);
       }
@@ -113,7 +114,7 @@ const handleUpdate = async (formData) => {
           className="w-32 h-32 rounded-full object-cover border border-gray-300 shadow"
         />
         <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2">
-          <ProfileRow label="Company Name" value={data.company_name} />
+          <ProfileRow label="Company Name" value={data.name} />
           <ProfileRow label="Email" value={data.email} />
           <ProfileRow label="Phone" value={data.phone_number} />
           <ProfileRow label="Company Location" value={data.company_location} />
